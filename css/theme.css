@@ -1,0 +1,56 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.header-container h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.theme-toggle button {
+    padding: 4px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+.theme-toggle img {
+    width: 24px;
+    height: 24px;
+}
+
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+body.dark-theme {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+}
+
+
+input, textarea, select, button {
+    transition: background-color 0.1s, color 0.1s;
+}
+
+body.light-theme input,
+body.light-theme textarea,
+body.light-theme select {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+body.dark-theme input,
+body.dark-theme textarea,
+body.dark-theme select {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}

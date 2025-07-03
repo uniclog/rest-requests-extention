@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>REST Request Sender</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/response.css"/>
+    <link rel="stylesheet" href="css/theme.css"/>
+</head>
+<body>
+<div class="container">
+    <div class="header-container">
+        <h2>REST Request Sender</h2>
+        <div class="theme-toggle">
+            <button id="theme-toggle-btn" title="Toggle Theme">
+                <img id="theme-icon" src="icons/icon-theme-dark.png" alt="Toggle Theme"/>
+            </button>
+            <button id="history-btn" title="Request History">
+                <img id="history-icon" src="icons/icon-theme-dark.png" alt="History"/>
+            </button>
+        </div>
+    </div>
+
+    <label for="select-template">Saved Templates:</label>
+    <select id="select-template">
+        <option value="">new template</option>
+    </select>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Template Name" autocomplete="off"/>
+
+    <label for="method">HTTP Method:</label>
+    <select id="method">
+        <option>GET</option>
+        <option>POST</option>
+        <option>PUT</option>
+        <option>DELETE</option>
+        <option>PATCH</option>
+        <option>OPTIONS</option>
+        <option>HEAD</option>
+    </select>
+
+    <label for="url">URL:</label>
+    <input type="text" id="url" placeholder="https://api.example.com/resource" autocomplete="off"/>
+
+    <label>Headers:</label>
+    <div id="headers"></div>
+    <button id="add-header" type="button">+ Add Header</button>
+
+
+    <button id="toggle-body-button">Show Body</button>
+
+    <div id="body-container" style="display: none; margin-top: 10px;">
+        <label for="body">Request Body:</label>
+        <textarea id="body" placeholder="Enter request body" rows="5"></textarea>
+    </div>
+
+    <div class="buttons">
+        <button id="send-request" type="button">Send Request</button>
+        <div class="template-buttons">
+            <button id="save-template">Save</button>
+            <button id="delete-template">Delete</button>
+        </div>
+    </div>
+
+    <div id="status" class="hidden"></div>
+
+    <div id="response-container" style="display:none;">
+        <div style="display: flex">
+            <h3 style="flex: 1;">Response:</h3>
+            <div class="response-controls">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="wrap-toggle">
+                    <span class="custom-checkbox"></span>
+                    <span class="checkbox-label">Wrap</span>
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="format-toggle">
+                    <span class="custom-checkbox"></span>
+                    <span class="checkbox-label">Format</span>
+                </label>
+            </div>
+        </div>
+        <label for="response"></label>
+        <textarea id="response" wrap="off" readonly style="width: 100%; resize: vertical;"></textarea>
+
+        <h3>Response Headers:</h3>
+        <label for="response-headers"></label>
+        <textarea id="response-headers" readonly></textarea>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script src="js/theme.js"></script>
+</body>
+</html>

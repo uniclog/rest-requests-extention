@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Request History</title>
+    <link rel="stylesheet" href="css/history.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body class="dark-theme">
+<div class="container">
+    <div class="tabs">
+        <button class="tab-button active" data-tab="templates">Templates</button>
+        <button class="tab-button" data-tab="history">History</button>
+    </div>
+</div>
+<div id="history" class="tab-content">
+    <div class="history-header">
+        <h2>Request History</h2>
+        <div class="history-actions">
+            <div class="template-tools">
+                <button id="refresh-history-btn" title="Refresh">Refresh</button>
+                <button id="clear-history-btn" title="Clear History">🗑️ Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="history-list" class="history-list"></div>
+</div>
+
+<div id="templates" class="tab-content active">
+    <div class="history-header">
+        <h2>Saved Templates</h2>
+        <div class="history-actions">
+            <div class="template-tools">
+                <button id="refresh-templates-btn" title="Refresh">Refresh</button>
+                <button id="export-templates">Export Templates</button>
+                <input type="file" id="import-file" accept=".json" style="display:none;"/>
+                <button id="import-templates">Import Templates</button>
+            </div>
+        </div>
+    </div>
+    <div id="templates-list" class="history-list"></div>
+</div>
+<script src="js/history.js"></script>
+</body>
+</html>
