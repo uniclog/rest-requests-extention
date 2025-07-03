@@ -1,7 +1,6 @@
 /* Общие стили */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
     padding: 10px;
     background-color: #f4f4f4;
     color: #333;
@@ -131,7 +130,6 @@ p {
 }
 
 .container {
-    width: 100%;
     padding: 20px;
     display: flex;
     justify-content: center;

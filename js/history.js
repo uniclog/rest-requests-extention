@@ -72,8 +72,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function loadTemplates() {
+        templatesList.innerHTML = '';
+
         chrome.storage.local.get(['templates'], (result) => {
             const templates = result.templates || [];
+            if (templates.length === 0) {
+                templatesList.innerHTML = '<p>No templates.</p>';
+                return;
+            }
 
             templates.forEach((item, index) => {
                 const entry = document.createElement('div');
